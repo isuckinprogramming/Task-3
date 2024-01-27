@@ -1,7 +1,7 @@
 @extends('layouts.basicHeadLayout')
 
 @section("additional-head-content")
-    <link rel="stylesheet" href="./../css/test.css" />
+    {{-- <link href="./../../css/test.css"  rel="stylesheet"/> --}}
 @endsection
 
 @section("body-content")

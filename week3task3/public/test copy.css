@@ -7,5 +7,5 @@ h1{
 .something {
     font-size: xx-large;
     font-weight: 700;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }

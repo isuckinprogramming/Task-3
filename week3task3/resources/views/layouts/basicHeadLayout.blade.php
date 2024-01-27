@@ -7,13 +7,13 @@
         <title>Generic Layout Head Only</title>
 
         <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
+        {{-- <link rel="preconnect" href="https://fonts.bunny.net"> --}}
 
         {{-- Not sure if I should remove this shit --}}
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap"
-        rel="stylesheet" />
+        {{-- <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap"
+        rel="stylesheet" /> --}}
 
-        <link href="/week3task3/resources/css/test.css" rel="stylesheet"/>
+        <link href="test copy.css" rel="stylesheet">
 
 
         <!-- Styles -->
