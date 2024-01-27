@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\DBDisplayController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/something', 'TestController@index');
+Route::get('/something', [TestController::class,'index']);
 
 Route::get('/tests/{$param}','TestController@index');
+
+Route::get('/newSite',[DBDisplayController::class,'show']);
