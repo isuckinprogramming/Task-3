@@ -15,12 +15,15 @@ use App\Http\Controllers\TestController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/something', [TestController::class,'index']);
+
+Route::get('/', [TestController::class,'index']);
+
+Route::get('/Dashboard', [TestController::class,'index']);
 
 Route::get('/tests/{$param}','TestController@index');
 
-Route::get('/newSite',[DBDisplayController::class,'show']);
+Route::get('/tableDisplay',[DBDisplayController::class,'show']);

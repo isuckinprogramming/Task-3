@@ -5,7 +5,7 @@
 @endsection
 
 @section("body-content")
-    <h1 class="something">Test if this works</h1>
+    {{-- <h1 class="something">Test if this works</h1>
     <h1>trying out retrieving content from database</h1>
 
     @foreach( $energy_drinks as $e_drink )
@@ -17,20 +17,22 @@
                 <p> {{ $e_drink->full_description}} </p>
             </h2>
         </div>
-    @endforeach
+    @endforeach --}}
 
+    <h1>Names of table in Database</h1>
     <ul>
-        <h1>Names of table in Database</h1>
     @foreach( $tableNames as $tableName )
         <li>
-            {{$tableName->Tables_in_it6ldb}}
-            <a href="/newSite?dbTableName={{$tableName->Tables_in_it6ldb}}">View table contents</a>
+            <p class="table-name-display">{{$tableName->Tables_in_it6ldb}}</p>
+            <a class="link-to-table-displayer"
+            href="/tableDisplay?dbTableName={{$tableName->Tables_in_it6ldb}}">
+            View table contents</a>
         </li>
     @endforeach
     </ul>
 
     {{-- BOoooooooooooooo yaahhhhh it fuckcign worsssks --}}
-    <a href="/newSite?test=1">Click to enter new site</a>
-
+    {{-- testing code --}}
+    {{-- <a href="/newSite?test=1">Click to enter new site</a> --}}
 @endsection
 

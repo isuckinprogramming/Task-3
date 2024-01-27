@@ -20,7 +20,7 @@ class TestController extends Controller
 
         ];
 
-        return view('something',$parameterVar);
+        return view('Dashboard',$parameterVar);
     }
 
     private function retrieveTableNames()

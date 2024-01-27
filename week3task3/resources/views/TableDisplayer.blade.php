@@ -38,7 +38,10 @@
         </tr>
         @php
         // this foreach loop is great, it automatically destructures the data
-        // inside the loop
+        // inside the loop, which is confusing as fuck as I don't really know the
+        // process behind it and how it will operate with other data types aside arrays
+        // much less complex datatypes such as the ones for return types for the Eloquent ORM
+        // might break and change later in the future
         foreach($allTableData as $rowData){
             echo "<tbody><tr>";
             foreach($rowData as $data){
