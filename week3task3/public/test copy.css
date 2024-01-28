@@ -1,11 +1,24 @@
-h1{
-    font-size: xx-large;
-    font-weight: 700;
 
+
+h1{
+    font-size:1.8em;
+    font-weight: 700;
 }
 
 .something {
     font-size: xx-large;
     font-weight: 700;
+    text-transform: uppercase;
+}
+
+body {
+    background-color: black;
+    color : white;
+}
+
+a{
+    color:rgb(50, 136, 210);
+    font-size: 1.3em;
+    text-align: center;
     text-transform: uppercase;
 }
