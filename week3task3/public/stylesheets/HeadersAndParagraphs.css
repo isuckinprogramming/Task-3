@@ -1,0 +1,27 @@
+.table-details{
+    text-align: center;
+    background-image: url('../images/table-details-base-background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:white;
+    font-size: xx-large;
+
+    padding: 120px 120px 20px 20px;
+}
+
+.table-name{
+    font-size: 2em;
+}
+
+body{
+    background-image: url('../images/body-background-ver2.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tableContents{
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-grow: inherit; */
+    align-content:center ;
+}

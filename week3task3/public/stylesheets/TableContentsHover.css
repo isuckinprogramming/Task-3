@@ -1,0 +1,40 @@
+*{
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    font-size: large;
+}
+
+tr:hover{
+    background-image: url('../images/table-row-on-hover.svg');
+
+    /* transition-duration: 100ms; */
+    transition-duration: 1000ms;
+    /* transition-duration: 300ms; */
+
+}
+tr{
+    /* transition-duration: 100ms; */
+    transition-duration: 1000ms;
+
+    background-image: url('../images/table-row-base-ver2.svg');
+
+    color: black;
+}
+
+th:hover,td:hover{
+        /* transition-duration: 100ms; */
+    transition-duration: 1000ms;
+    background-image: url('../images/table-data-on-hover.svg');
+    /* transition-duration: 1000ms; */
+}
+th, td{
+    transition: 1500ms;
+    padding: 25px;
+}
+
+table{
+    background-image: url('../images/table-background.svg');
+    padding: 50px 100px 100px 100px;
+    text-align: center  ;
+}

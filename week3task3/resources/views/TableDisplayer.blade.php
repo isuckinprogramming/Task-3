@@ -12,48 +12,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contents of {{$tableName}}</title>
+    <title>{{$tableName}}</title>
 
+    <link href="stylesheets/HeadersAndParagraphs.css" rel="stylesheet">
+    <link  href="stylesheets/TableContentsHover.css" rel="stylesheet">
     <style>
         table,th,td {
             border: solid black 5px;
-            padding :10px
+            /* padding :10px */
         }
         th{
-            margin: 5px;
+            /* margin: 5px; */
         }
     </style>
 </head>
 <body>
+    <div class="table-details">
+
     {{-- I honestly don't get what the error is about --}}
-    <h1>{{$tableName}}</h1>
-    <h1>The table is @if($isTableInsideDB) inside @else not inside @endif </h1>
-    <h2>Number of columns {{$columnNums}}</h2>
-
-    <table>
-        <tr>
-        @foreach($columnNames as $names)
-            <th>{{$names}}</th>
-        @endforeach
-        </tr>
-        @php
-        // this foreach loop is great, it automatically destructures the data
-        // inside the loop, which is confusing as fuck as I don't really know the
-        // process behind it and how it will operate with other data types aside arrays
-        // much less complex datatypes such as the ones for return types for the Eloquent ORM
-        // might break and change later in the future
-        foreach($allTableData as $rowData){
-            echo "<tbody><tr>";
-            foreach($rowData as $data){
-                echo "<td>$data</td>";
+    <h1 class="table-name" style="text-transform:uppercase;">{{$tableName}}</h1>
+    <h1 class="table-status">The table is @if($isTableInsideDB) inside @else not inside @endif </h1>
+    <h2 class="column-count">Number of columns {{$columnNums}}</h2>
+    </div>
+    <div class="tableContents">
+        <table>
+            <tr>
+            @foreach($columnNames as $names)
+                <th style="text-transform:uppercase;">{{$names}}</th>
+            @endforeach
+            </tr>
+            @php
+            // this foreach loop is great, it automatically destructures the data
+            // inside the loop, which is confusing as fuck as I don't really know the
+            // process behind it and how it will operate with other data types aside arrays
+            // much less complex datatypes such as the ones for return types for the Eloquent ORM
+            // might break and change later in the future
+            foreach($allTableData as $rowData){
+                echo "<tbody><tr>";
+                foreach($rowData as $data){
+                    echo "<td>$data</td>";
+                }
+                echo "</tbody></tr>";
             }
-            echo "</tbody></tr>";
-        }
-        @endphp
-    </table>
-
-
-
+            @endphp
+        </table>
+    </div>
 </body>
-
 </html>
